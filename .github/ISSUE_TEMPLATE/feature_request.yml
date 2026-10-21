@@ -1,0 +1,92 @@
+name: Feature request
+description: Suggest something new for the site, or a change to how something works now.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the idea. Think it through as much as you can so the vision comes across.
+        Please check the [open issues](https://github.com/TSaucier1/gnomes/issues) first in case someone has already asked for it. If they have, add a comment there instead.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What do you want this feature to accomplish?
+      description: Describe the job you are trying to get done, or what is hard or slow today. The "why" matters more than the "how".
+      placeholder: When a part arrives we have to find every task that was waiting on it by hand, which takes a long time on a big site.
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: How would you like it to work?
+      description: Walk through how you picture using it, step by step. Where would the button or page be, and what would happen when you use it?
+      placeholder: |
+        1. On the To Order list, mark a part as received
+        2. The site shows a list of the tasks that were waiting on that part
+        3. ...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which part of the site does it touch?
+      multiple: true
+      options:
+        - Tasks
+        - Assets
+        - To Do List
+        - Inventory
+        - To Order
+        - Hose Registry
+        - Packages
+        - Logs
+        - Settings (backups, restore, users, site settings)
+        - Exports to Excel
+        - Updating or installing the site
+        - Something new / not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: fields
+    attributes:
+      label: What information would each entry need?
+      description: If the feature stores something new, list the fields it would hold and which ones are required.
+      placeholder: |
+        - Part number (required)
+        - Date received (required)
+        - Received by
+        - Notes
+    validations:
+      required: false
+
+  - type: dropdown
+    id: importance
+    attributes:
+      label: How important is this to you?
+      options:
+        - Nice to have
+        - Would save real time
+        - Blocking our work
+    validations:
+      required: true
+
+  - type: textarea
+    id: workaround
+    attributes:
+      label: How do you handle this today?
+      description: Any workaround or other tool you use now, and anything else you considered.
+    validations:
+      required: false
+
+  - type: textarea
+    id: sketches
+    attributes:
+      label: Sketches, screenshots or examples
+      description: Drag files into this box to attach them. A photo of a pen and paper drawing is better than nothing, and so is a screenshot of another program that does it well.
+    validations:
+      required: false

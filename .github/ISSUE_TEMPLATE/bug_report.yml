@@ -1,0 +1,122 @@
+name: Bug report
+description: Something on the site is broken, shows an error or does the wrong thing.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this. The more detail you give, the faster it can be found and fixed.
+        Please check the [open issues](https://github.com/TSaucier1/gnomes/issues) first in case it has already been reported.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the problem. Include any error message shown on screen, word for word if you can.
+      placeholder: When I mark a task complete on the To Do List, the page shows "Something went wrong" and the task stays open.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to make it happen again
+      description: List each click or entry in order, so the bug can be repeated during troubleshooting.
+      placeholder: |
+        1. Go to the To Do List
+        2. Click the check mark on any task
+        3. Enter a comment and press Complete
+        4. See the error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+      placeholder: The task closes and moves to the completed list.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which part of the site?
+      options:
+        - Tasks
+        - Assets
+        - To Do List
+        - Inventory
+        - To Order
+        - Hose Registry
+        - Packages
+        - Logs
+        - Settings (backups, restore, users, site settings)
+        - Exports to Excel
+        - Updating or installing the site
+        - Somewhere else / not sure
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: How often does it happen?
+      options:
+        - Every time
+        - Sometimes
+        - Only happened once
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Site version
+      description: Shown on the Settings page under "Currently Installed Version".
+      placeholder: v4.2.1
+    validations:
+      required: true
+
+  - type: dropdown
+    id: install
+    attributes:
+      label: What is the site running on?
+      options:
+        - Synology NAS
+        - Windows laptop
+        - Other server
+        - Not sure
+    validations:
+      required: true
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser
+      placeholder: Chrome on Windows 11
+    validations:
+      required: false
+
+  - type: textarea
+    id: console
+    attributes:
+      label: Browser console errors
+      description: |
+        In Chrome press Ctrl + Shift + I and open the Console tab, then make the bug happen again.
+        Copy any red errors and paste them here, or right click the console and choose "Save as..." and attach the file below.
+      render: text
+    validations:
+      required: false
+
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Screenshots and log file
+      description: |
+        Drag files into this box to attach them.
+        - A screenshot or short video of the problem helps a lot, especially for anything visual.
+        - The site log: go to Settings, open the Logs tab and download the spreadsheet, then attach it here.
+    validations:
+      required: false

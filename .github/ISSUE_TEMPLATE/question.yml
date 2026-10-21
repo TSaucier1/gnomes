@@ -1,0 +1,35 @@
+name: Question or help
+description: Ask how to do something, or report help pages that are wrong or missing.
+title: "[Question]: "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The ? icon at the top of the site, or Help / Manual in the side menu, opens the help pages. Please check there first, your answer may already be written up.
+
+  - type: textarea
+    id: question
+    attributes:
+      label: What do you need help with?
+      description: Say what you are trying to do and where you got stuck.
+      placeholder: I want to move tasks from one asset to another without recreating them. Is there a way to do that?
+    validations:
+      required: true
+
+  - type: textarea
+    id: tried
+    attributes:
+      label: What have you tried?
+      description: Steps you took, and any help page you read. If a help page is wrong or unclear, say which one.
+    validations:
+      required: false
+
+  - type: input
+    id: version
+    attributes:
+      label: Site version
+      description: Shown on the Settings page under "Currently Installed Version".
+      placeholder: v4.2.1
+    validations:
+      required: false
